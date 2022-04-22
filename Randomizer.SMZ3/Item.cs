@@ -418,12 +418,7 @@ namespace Randomizer.SMZ3 {
                 new Item(ETank),
                 new Item(ETank),
                 new Item(ETank),
-                new Item(ETank),
-                new Item(ETank),
 
-                new Item(ReserveTank),
-                new Item(ReserveTank),
-                new Item(ReserveTank),
                 new Item(ReserveTank),
             };
 
@@ -437,16 +432,11 @@ namespace Randomizer.SMZ3 {
 
         public static List<Item> CreateNicePool(World world) {
             var itemPool = new List<Item> {
-                new Item(ProgressiveTunic),
-                new Item(ProgressiveTunic),
-                new Item(ProgressiveSword),
                 new Item(ProgressiveSword),
                 new Item(SilverArrows),
                 new Item(BlueBoomerang),
                 new Item(RedBoomerang),
-                new Item(Bottle),
-                new Item(Bottle),
-                new Item(Bottle),
+                new Item(OneRupee),
                 new Item(HeartContainerRefill),
 
                 new Item(Spazer),
@@ -466,21 +456,21 @@ namespace Randomizer.SMZ3 {
                 new Item(OneHundredRupees)
             };
 
-            itemPool.AddRange(Copies(24, () => new Item(HeartPiece)));
-            itemPool.AddRange(Copies(8,  () => new Item(TenArrows)));
-            itemPool.AddRange(Copies(13, () => new Item(ThreeBombs)));
+            itemPool.AddRange(Copies(14, () => new Item(HeartPiece)));
+            itemPool.AddRange(Copies(28,  () => new Item(TenArrows)));
+            itemPool.AddRange(Copies(19, () => new Item(ThreeBombs)));
             itemPool.AddRange(Copies(4,  () => new Item(ArrowUpgrade5)));
             itemPool.AddRange(Copies(4,  () => new Item(BombUpgrade5)));
-            itemPool.AddRange(Copies(2,  () => new Item(OneRupee)));
-            itemPool.AddRange(Copies(4,  () => new Item(FiveRupees)));
+            itemPool.AddRange(Copies(52,  () => new Item(OneRupee)));
+            itemPool.AddRange(Copies(14,  () => new Item(FiveRupees)));
             itemPool.AddRange(Copies(world.Config.Keysanity ? 21 : 28, () => new Item(TwentyRupees)));
             itemPool.AddRange(Copies(7,  () => new Item(FiftyRupees)));
             itemPool.AddRange(Copies(5,  () => new Item(ThreeHundredRupees)));
 
             itemPool.AddRange(Copies(9,  () => new Item(ETank)));
-            itemPool.AddRange(Copies(39, () => new Item(Missile)));
-            itemPool.AddRange(Copies(15, () => new Item(Super)));
-            itemPool.AddRange(Copies(8,  () => new Item(PowerBomb)));
+            itemPool.AddRange(Copies(7, () => new Item(Missile)));
+            itemPool.AddRange(Copies(3, () => new Item(Super)));
+            itemPool.AddRange(Copies(1,  () => new Item(PowerBomb)));
 
             foreach (var item in itemPool) item.World = world;
 
